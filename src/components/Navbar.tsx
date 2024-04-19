@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -14,34 +15,34 @@ export default function Navbar({}: Props) {
             Ecoyaan
           </div>
           <div className="space-x-4 gap-6">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-zinc-800 hover:text-green-600 font-bold "
               style={{ marginRight: "15px" }}
             >
               Home
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/aboutus"
               className="text-zinc-800 hover:text-green-600 font-bold "
               style={{ marginRight: "15px" }}
             >
               About Us
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/"
               className="text-zinc-800 hover:text-green-600 font-bold "
               style={{ marginRight: "15px" }}
             >
               Sell on Ecoyaan
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/"
               className="text-zinc-800 hover:text-green-600 font-bold "
               style={{ marginRight: "15px" }}
             >
               Careers
-            </a>
+            </Link>
           </div>
         </div>
       </div>
