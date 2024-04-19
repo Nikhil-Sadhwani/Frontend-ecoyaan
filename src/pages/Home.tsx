@@ -38,7 +38,9 @@ export default function ({}: Props) {
         imageDir="https://ecoyaan.com/images/OurStory4.png"
         showImageAtLeft={false}
       />
-      <div style={{ width: "400px", marginBottom: "36px" }}>
+      <div
+        style={{ width: "400px", marginBottom: "36px", textAlign: "center" }}
+      >
         <button
           className=" text-white px-4 py-2 mt-2 rounded-lg "
           style={{ width: "150px", background: "rgb(22 163 74 )" }}
