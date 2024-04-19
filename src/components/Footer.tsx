@@ -1,0 +1,146 @@
+import React, { FC } from "react";
+
+interface SharedClasses {
+  textColor: string;
+  hoverTextColor: string;
+}
+
+const sharedClasses: SharedClasses = {
+  textColor: "text-zinc-600 dark:text-zinc-300",
+  hoverTextColor: "hover:text-zinc-800 dark:hover:text-zinc-100",
+};
+
+interface FooterLinkProps {
+  href: string;
+  children: React.ReactNode;
+}
+
+const FooterLink: FC<FooterLinkProps> = ({ href, children }) => {
+  return (
+    <li>
+      <a
+        href={href}
+        className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+      >
+        {children}
+      </a>
+    </li>
+  );
+};
+
+const Footer: FC = () => {
+  return (
+    <>
+      <div className="bg-gray-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200">
+        <div className="flex justify-center mt-1">
+          <button
+            className="font-bold"
+            style={{ padding: "4px", float: "right", borderRadius: "4px" }}
+          >
+            Back to top
+          </button>
+        </div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
+          <div className="text-left">
+            <h3 className="font-bold text-lg mb-3">Company</h3>
+            <ul>
+              <FooterLink href="#">About Us</FooterLink>
+              <FooterLink href="#">Sell on Ecoyaan</FooterLink>
+              <FooterLink href="#">Careers</FooterLink>
+            </ul>
+          </div>
+          <div className="text-left">
+            <h3 className="font-bold text-lg mb-3">Links</h3>
+            <ul>
+              <FooterLink href="#">Privacy Policy</FooterLink>
+              <FooterLink href="#">Terms of Use</FooterLink>
+            </ul>
+          </div>
+          <div className="text-left">
+            <h3 className="font-bold text-lg mb-3">Follow Us</h3>
+            <div className={`flex space-x-3 `} style={{ width: "80px" }}>
+              <a
+                href="#"
+                className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/174/174855.png"
+                  alt="Instagram"
+                />
+              </a>
+              <a
+                href="#"
+                className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/174/174857.png"
+                  alt="Linkedin"
+                />
+              </a>
+              <a
+                href="#"
+                className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/145/145802.png"
+                  alt="Facebook"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="text-left">
+            <h3 className=" text-lg mb-3">
+              Subscribe to receive updates on blogs, future launches and more!
+            </h3>
+
+            <form action="#" method="POST">
+              <input
+                type="email"
+                placeholder="Your Email Address"
+                className={`w-full rounded border-none shadow-md`}
+              />
+              <p className="text-xs mt-1">
+                By subscribing, you agree to receive notifications
+              </p>
+              <a href="#" className="text-blue-500 underline">
+                Privacy Policy
+              </a>
+              <button
+                type="submit"
+                className={`w-full mt-2 rounded p-2 text-white`}
+                style={{
+                  background: "rgb(22 163 74 )",
+                }}
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div className="text-left">
+            <h3 className="font-bold text-lg mb-3">Registered Address:</h3>
+            <div className="flex space-x-3">
+              1-N-12T-781/1 <br />
+              Sri Krishna Vilasa,
+              <br /> Urvastores,
+              <br /> Ashoknagar(MR),
+              <br /> Mangalore,
+              <br /> Dakshina Kannada- 575006,
+              <br /> Karnataka, India
+            </div>
+          </div>
+          <div className="text-left">
+            <h3 className="font-bold text-lg mb-3">Legal Business Name:</h3>
+            <div className="flex space-x-3">
+              Kindkarma E-Retail Private Limited <br />
+              <br />
+              CIN: U47912KA2023PTC182592
+              <br /> Telephone: +91 9980490777
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Footer;
