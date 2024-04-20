@@ -25,9 +25,19 @@ const Footer: FC = () => {
       <div className="bg-gray-200 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200">
         <div className="flex justify-center mt-1">
           <button
-            className="font-bold"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="font-bold "
             style={{ padding: "4px", float: "right", borderRadius: "4px" }}
           >
+            <img
+              src="https://cdn-icons-png.flaticon.com/128/130/130906.png"
+              alt="arrow"
+              style={{ display: "inline", marginRight: "10px" }}
+              width={"10px"}
+              height={"10px"}
+            />
             Back to top
           </button>
         </div>
@@ -35,7 +45,7 @@ const Footer: FC = () => {
           <div className="text-left">
             <h3 className="font-bold text-lg mb-3">Company</h3>
             <ul>
-              <FooterLink to="/">About Us</FooterLink>
+              <FooterLink to="/aboutus">About Us</FooterLink>
               <FooterLink to="/">Sell on Ecoyaan</FooterLink>
               <FooterLink to="/">Careers</FooterLink>
             </ul>

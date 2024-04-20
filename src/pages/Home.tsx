@@ -1,7 +1,12 @@
 import Para_Image from "../components/Para_Image";
 import Carousel from "../components/Carousal";
+import { useEffect } from "react";
 
 export default function () {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div>
       <Carousel />
