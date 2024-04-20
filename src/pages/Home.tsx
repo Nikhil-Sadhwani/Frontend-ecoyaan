@@ -1,10 +1,7 @@
-import React from "react";
 import Para_Image from "../components/Para_Image";
 import Carousel from "../components/Carousal";
 
-type Props = {};
-
-export default function ({}: Props) {
+export default function () {
   return (
     <div>
       <Carousel />

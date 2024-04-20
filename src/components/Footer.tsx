@@ -1,29 +1,20 @@
 import React, { FC } from "react";
-
-interface SharedClasses {
-  textColor: string;
-  hoverTextColor: string;
-}
-
-const sharedClasses: SharedClasses = {
-  textColor: "text-zinc-600 dark:text-zinc-300",
-  hoverTextColor: "hover:text-zinc-800 dark:hover:text-zinc-100",
-};
+import { Link } from "react-router-dom";
 
 interface FooterLinkProps {
-  href: string;
+  to: string;
   children: React.ReactNode;
 }
 
-const FooterLink: FC<FooterLinkProps> = ({ href, children }) => {
+const FooterLink: FC<FooterLinkProps> = ({ to, children }) => {
   return (
     <li>
-      <a
-        href={href}
-        className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+      <Link
+        to={to}
+        className={`text-zinc-600 dark:text-zinc-300 hover:text-zinc-800 dark:hover:text-zinc-100`}
       >
         {children}
-      </a>
+      </Link>
     </li>
   );
 };
@@ -44,48 +35,48 @@ const Footer: FC = () => {
           <div className="text-left">
             <h3 className="font-bold text-lg mb-3">Company</h3>
             <ul>
-              <FooterLink href="#">About Us</FooterLink>
-              <FooterLink href="#">Sell on Ecoyaan</FooterLink>
-              <FooterLink href="#">Careers</FooterLink>
+              <FooterLink to="/">About Us</FooterLink>
+              <FooterLink to="/">Sell on Ecoyaan</FooterLink>
+              <FooterLink to="/">Careers</FooterLink>
             </ul>
           </div>
           <div className="text-left">
             <h3 className="font-bold text-lg mb-3">Links</h3>
             <ul>
-              <FooterLink href="#">Privacy Policy</FooterLink>
-              <FooterLink href="#">Terms of Use</FooterLink>
+              <FooterLink to="/">Privacy Policy</FooterLink>
+              <FooterLink to="/">Terms of Use</FooterLink>
             </ul>
           </div>
           <div className="text-left">
             <h3 className="font-bold text-lg mb-3">Follow Us</h3>
             <div className={`flex space-x-3 `} style={{ width: "80px" }}>
-              <a
-                href="#"
-                className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+              <Link
+                to="/"
+                className={`text-zinc-600 dark:text-zinc-300 hover:text-zinc-800 dark:hover:text-zinc-100`}
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/174/174855.png"
                   alt="Instagram"
                 />
-              </a>
-              <a
-                href="#"
-                className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+              </Link>
+              <Link
+                to="/"
+                className={`text-zinc-600 dark:text-zinc-300 hover:text-zinc-800 dark:hover:text-zinc-100`}
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/174/174857.png"
                   alt="Linkedin"
                 />
-              </a>
-              <a
-                href="#"
-                className={`${sharedClasses.textColor} ${sharedClasses.hoverTextColor}`}
+              </Link>
+              <Link
+                to="/"
+                className={`text-zinc-600 dark:text-zinc-300 hover:text-zinc-800 dark:hover:text-zinc-100`}
               >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/145/145802.png"
                   alt="Facebook"
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-left">
@@ -102,9 +93,9 @@ const Footer: FC = () => {
               <p className="text-xs mt-1">
                 By subscribing, you agree to receive notifications
               </p>
-              <a href="#" className="text-blue-500 underline">
+              <Link to="/" className="text-blue-500 underline">
                 Privacy Policy
-              </a>
+              </Link>
               <button
                 type="submit"
                 className={`w-full mt-2 rounded p-2 text-white`}

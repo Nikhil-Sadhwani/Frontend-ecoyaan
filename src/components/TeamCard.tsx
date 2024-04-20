@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-interface Props {
+interface PropsType {
   imgDir: string;
   name: string;
   role: string;
@@ -10,7 +9,7 @@ interface Props {
   logo?: Boolean;
 }
 
-export default function TeamCard(props: Props) {
+export default function TeamCard(props: PropsType) {
   return (
     <div className="flex flex-col justify-between items-center max-w-7xl mx-auto text-center">
       <div className="overflow-hidden hover:scale-105 transition-transform">

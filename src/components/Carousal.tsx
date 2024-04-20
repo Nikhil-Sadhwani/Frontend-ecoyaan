@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect } from "react";
 
 interface ImageData {
   src: string;
@@ -8,7 +8,7 @@ interface ImageData {
   buttonText: string;
 }
 
-const IMAGE_DATA: ImageData[] = [
+const IMAGEDATA: ImageData[] = [
   {
     src: "https://ecoyaan.com/images/carousel-1.png",
     alt: "Image 1",
@@ -32,16 +32,16 @@ const IMAGE_DATA: ImageData[] = [
   },
 ];
 
-const Slideshow: FC = () => {
+const Carousal: FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
   const showNextImage = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % IMAGE_DATA.length);
+    setCurrentImageIndex((currentImageIndex + 1) % IMAGEDATA.length);
   };
 
   const showPrevImage = () => {
     setCurrentImageIndex(
-      (currentImageIndex - 1 + IMAGE_DATA.length) % IMAGE_DATA.length
+      (currentImageIndex - 1 + IMAGEDATA.length) % IMAGEDATA.length
     );
   };
 
@@ -53,7 +53,7 @@ const Slideshow: FC = () => {
   return (
     <div className="relative bg-zinc-900 text-white" style={{ height: "85vh" }}>
       <div className="flex overflow-x-auto" style={{ height: "85vh" }}>
-        {IMAGE_DATA.map((image: ImageData, index: number) => (
+        {IMAGEDATA.map((image: ImageData, index: number) => (
           <div
             key={index}
             className="w-full"
@@ -85,7 +85,7 @@ const Slideshow: FC = () => {
                   Previous
                 </button>
               )}
-              {index !== IMAGE_DATA.length - 1 && (
+              {index !== IMAGEDATA.length - 1 && (
                 <button className={BUTTON_CLASS} onClick={showNextImage}>
                   Next
                 </button>
@@ -124,4 +124,4 @@ const Slideshow: FC = () => {
   );
 };
 
-export default Slideshow;
+export default Carousal;

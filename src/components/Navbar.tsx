@@ -1,9 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-type Props = {};
-
-export default function Navbar({}: Props) {
+export default function Navbar() {
   return (
     <nav className="bg-white shadow-md sticky top-0 left-0 z-50 h-16">
       <div className="w-full px-6">

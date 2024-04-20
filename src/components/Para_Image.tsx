@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import { FC } from "react";
 
-interface EcoyaanCommunityProps {
+interface PropsType {
   heading: string;
   paragraph: string[];
   imageDir: string;
@@ -8,7 +8,7 @@ interface EcoyaanCommunityProps {
   isVideo?: Boolean;
 }
 
-const EcoyaanCommunity: FC<EcoyaanCommunityProps> = (props) => {
+const Para_Image: FC<PropsType> = (props) => {
   return (
     <div className="flex justify-center items-center bg-white p-8">
       <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
@@ -56,7 +56,6 @@ const EcoyaanCommunity: FC<EcoyaanCommunityProps> = (props) => {
               height="315"
               src="https://ecoyaan.com/images/ProductCuration.mp4"
               title="video "
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -73,4 +72,4 @@ const EcoyaanCommunity: FC<EcoyaanCommunityProps> = (props) => {
   );
 };
 
-export default EcoyaanCommunity;
+export default Para_Image;
