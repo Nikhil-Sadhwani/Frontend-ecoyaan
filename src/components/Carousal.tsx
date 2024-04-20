@@ -45,10 +45,10 @@ const Carousal: FC = () => {
     );
   };
 
-  useEffect(() => {
-    const interval = setInterval(showNextImage, 3000);
-    return () => clearInterval(interval);
-  }, [currentImageIndex]);
+  // useEffect(() => {
+  //   const interval = setInterval(showNextImage, 3000);
+  //   return () => clearInterval(interval);
+  // }, [currentImageIndex]);
 
   return (
     <div className="relative bg-zinc-900 text-white" style={{ height: "85vh" }}>
@@ -61,6 +61,27 @@ const Carousal: FC = () => {
               display: index === currentImageIndex ? "block" : "none",
             }}
           >
+            <div
+              className="flex justify-between mb-2 absolute "
+              style={{ width: "inherit", height: "100%" }}
+            >
+              <button onClick={showPrevImage}>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/271/271220.png"
+                  alt="left arrow"
+                  width={"20px"}
+                  height={"10px"}
+                />
+              </button>
+              <button onClick={showNextImage}>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+                  alt="right arrow"
+                  width={"20px"}
+                  height={"10px"}
+                />
+              </button>
+            </div>
             <img
               src={image.src}
               alt={image.alt}
@@ -80,17 +101,20 @@ const Carousal: FC = () => {
               >
                 {image.buttonText}
               </button>
-              {/* {index !== 0 && (
-                <button className={BUTTON_CLASS} onClick={showPrevImage}>
-                  Previous
-                </button>
-              )}
-              {index !== IMAGEDATA.length - 1 && (
-                <button className={BUTTON_CLASS} onClick={showNextImage}>
-                  Next
-                </button>
-              )} */}
             </div>
+            {/* <div
+              className="absolute inset-0 flex flex-row top-35 "
+              style={{ width: "fit-content" }}
+            >
+              <button onClick={showNextImage}>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/271/271228.png"
+                  alt="right arrow"
+                  width={"20px"}
+                  height={"10px"}
+                />
+              </button>
+            </div> */}
           </div>
         ))}
       </div>
