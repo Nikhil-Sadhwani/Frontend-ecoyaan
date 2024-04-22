@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Frontend-ecoyaan/static/css/main.50f40b08.css",
+    "main.js": "/Frontend-ecoyaan/static/js/main.aefe9ffc.js",
+    "static/js/453.a1cecde2.chunk.js": "/Frontend-ecoyaan/static/js/453.a1cecde2.chunk.js",
+    "index.html": "/Frontend-ecoyaan/index.html",
+    "main.50f40b08.css.map": "/Frontend-ecoyaan/static/css/main.50f40b08.css.map",
+    "main.aefe9ffc.js.map": "/Frontend-ecoyaan/static/js/main.aefe9ffc.js.map",
+    "453.a1cecde2.chunk.js.map": "/Frontend-ecoyaan/static/js/453.a1cecde2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50f40b08.css",
+    "static/js/main.aefe9ffc.js"
+  ]
+}
