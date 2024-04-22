@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-interface EcoyaanCommunityProps {
+interface PropsTypes {
   heading: string;
   paragraph: string[];
   imageDir: string;
@@ -8,7 +8,7 @@ interface EcoyaanCommunityProps {
   isVideo?: Boolean;
 }
 
-const EcoyaanCommunity: FC<EcoyaanCommunityProps> = (props) => {
+const ParaImage: FC<PropsTypes> = (props) => {
   return (
     <div className="flex justify-center items-center bg-white p-8">
       <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
@@ -73,4 +73,4 @@ const EcoyaanCommunity: FC<EcoyaanCommunityProps> = (props) => {
   );
 };
 
-export default EcoyaanCommunity;
+export default ParaImage;

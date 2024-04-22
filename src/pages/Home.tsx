@@ -1,8 +1,8 @@
-import Para_Image from "../components/Para_Image";
+import ParaImage from "../components/Para_Image";
 import Carousel from "../components/Carousal";
 import { useEffect } from "react";
 
-export default function () {
+export default function Home() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -10,7 +10,7 @@ export default function () {
   return (
     <div>
       <Carousel />
-      <Para_Image
+      <ParaImage
         heading="Join our community in creating a more sustainable future for
             everyone "
         paragraph={[
@@ -20,7 +20,7 @@ export default function () {
         imageDir="https://ecoyaan.com/images/Impact.png"
         showImageAtLeft={false}
       />
-      <Para_Image
+      <ParaImage
         heading="Carefully curated Eco-friendly products"
         paragraph={[
           "We believe that every purchase you make can have a positive impact on the planet and the future.",
@@ -30,7 +30,7 @@ export default function () {
         showImageAtLeft={true}
         isVideo={true}
       />
-      <Para_Image
+      <ParaImage
         heading="For businesses that care deeply about sustainability"
         paragraph={[
           "Do you run a business that is committed to sustainability in every aspect of your work?",

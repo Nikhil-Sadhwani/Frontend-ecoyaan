@@ -45,10 +45,11 @@ const Carousal: FC = () => {
     );
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(showNextImage, 3000);
-  //   return () => clearInterval(interval);
-  // }, [currentImageIndex]);
+  useEffect(() => {
+    const interval = setInterval(showNextImage, 3000);
+    return () => clearInterval(interval);
+    // eslint-disable-next-line
+  }, [currentImageIndex]);
 
   return (
     <div className="relative bg-zinc-900 text-white" style={{ height: "85vh" }}>
